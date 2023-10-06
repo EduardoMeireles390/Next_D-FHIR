@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbk0dOKL_ewoWVyQ4RNnx349xRTBcL-ac"></script>
+
+    <title>D-FHIR</title>
+</head>
+<body>
+    <section class="menu">
+        <!-- inicio do cabeçalho -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../../Index.html">
+                        <img class="logo" src="../images/LOGO.png" alt="logo">
+                    </a>
+                </div>
+            </nav>
+        <!-- fim do cabeçalho -->
+    </section>
+    <section class="conetudo_menu">
+      <div class="info">
+        <div class="container">
+          <div class="titulo">
+              <h1>Obrigado pelas informações</h1>
+              <h5>Agende sua consulta com um profissional de saúde qualificado para obter mais informações sobre como o <br> D-FHIR pode ajudá-lo a gerenciar seu diabetes.</h5>
+          </div>
+        <div class="container_agendamanto">
+            <div   class="div-cadastro">
+                <div class="div-formulario">
+            <h1>Agende sua Consulta:</h1>
+            <form action="/agendar" id="agendarForm" method="post">
+                  <div class="row">
+                  <div class="col-md-6">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-6">
+                      <label for="unidade_medica">Unidade médica</label>
+                      <select class="form-control" id="unidade_medica" name="unidade_medica">
+                        <option value="">Selecione uma unidade médica</option>
+                        <option value="Hospital Central">Hospital Central</option>
+                        <option value="Posto de Saúde da Vila">Posto de Saúde da Vila</option>
+                        <option value="Clínica Médica">Clínica Médica</option>
+                      </select>
+                    </div>
+                  <div class="col-md-6">
+                    <label for="medico">Médico</label>
+                    <select class="form-control" id="medico" name="medico">
+                      <option value="">Selecione um médico</option>
+                      <option value="Dr. João">Dr. João</option>
+                      <option value="Dra. Maria">Dra. Maria</option>
+                      <option value="Dr. José">Dr. José</option>
+                    </select>
+                  </div>
+                </div>
+            
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="data">Data</label>
+                    <input type="date" class="form-control" id="data" name="data" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="horario">Horário</label>
+                    <input type="time" class="form-control" id="horario" name="horario" required>
+                  </div>
+                </div><br>
+            
+                <button type="submit" id="agendar" class="btn btn-primary">Agendar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        </div>
+      </div>
+        </section>
+    <!-- fim conteudo menu  -->
+    <section>
+    <div class="container_localizacao">
+      <div class=" localizacao mt-5">
+        <div class="localizacao_texto">
+          <h1 class="mb-4">Hospitais perto de você:</h1>
+          <p>Para encontrar hospitais perto de você, siga estas etapas:
+
+            <p>1° Clique no botão <b>"Obter Localização"</b>.</p>
+            <p>2° O mapa irá se centralizar na sua localização atual.</p>
+            <p>3° Os hospitais próximos serão marcados no mapa.</p>
+            <p>4° Para obter mais informações sobre um hospital, clique no nome dele.</p>
+          <button id="obterLocalizacaoButton" class="btn btn-primary">Obter Localização</button>
+        </div>
+          <div id="resultado" class="mt-3"></div>
+          <div id="mapa" style="height: 400px;"></div>
+      </div>
+    </div>
+  
+  </section>
+
+    </section>    
+    <!-- conteudo meio -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+    <script src="../js/geolocalizacao.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_khNsIm4LptwNpmLoWyn18x_zt28F7fo"></script>
+    <script src="../js/agendamento.js"></script>
+</body>
+</html>

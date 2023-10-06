@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+
+    <title>D-FHIR</title>
+</head>
+<body>
+    <section class="menu">
+        <!-- inicio do cabeçalho -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img class="logo" src="./assets/images/LOGO.png" alt="">
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Início</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="./assets/pages/dicas.html">Dicas</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- botão -->
+                    <div class="wrapper">
+                        <div class="link_wrapper">
+                            <img class="icon_iten" src="./assets/images/passion.png" alt="icon">
+                            <button href="#" class="botao" id="login-button" onclick="showLoginDialog()">Login</button>
+                        </div>
+                        <!-- area de login -->
+                            <dialog id="login-dialog">
+                                <form id="login-form" action="/login" method="post" class="mb-3">
+                                    <h1>Usuário:</h1>
+                                    <label for="cadastro-login">Usuário:</label>
+                                    <input type="user"class="form-control rounded-pill" id="cadastro-login" placeholder="Digite seu Usuário"  required>
+                                    <label for="senha-login">Senha:</label>
+                                    <input type="password" class="form-control rounded-pill"  id="senha-login" placeholder="Digite sua senha" required><br>
+                                    <div class="botao-novo-cadastro">
+                                    <img class="icon_iten" src="./assets/images/passion.png" alt="icon">
+                                    <!-- <button>Login</button> -->
+                                     <a href="./assets/pages/formulario.html">Login</a>
+                                </div>
+                            </form>
+
+                                <a href="./assets/pages/cadastro.html" class="link-cadastro">Criar cadastro</a>
+
+                                <button type="button" class="close-button" onclick="closeLoginDialog()">
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="5px" height="5px" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                      </svg>  
+                                </button>
+                            </dialog>   
+                        <!-- fim area de login -->
+
+                    </div>
+                    <!-- fim botão -->
+                </div>
+            </nav>
+        <!-- fim do cabeçalho -->
+    </section>
+    <!-- conteudo menu -->
+    
+        <section class="conetudo_menu">
+            <div class="container">
+                <div class="titulo">
+                    <h1>D-FHIR seu sistema integrado de cuidados com a Diabetes</h1>
+                    <h5>O objetivo do D-FHIR é melhorar a qualidade e a eficiência dos cuidados com a diabetes, permitindo que os profissionais de saúde compartilhem informações de forma segura e consistente.</h5>
+                    <!-- inicio botão -->
+                    <div class="wrapper">
+                        <div class="link_wrapper">
+                            <img class="icon_iten" src="./assets/images/passion.png" alt="icon">
+                                <button href="#" class="botao" id="login-button" onclick="showLoginDialog()">Login</button>
+                            </div>
+                    </div>
+                    <!-- fim botão -->
+                </div>
+                <div class="imagem">
+                    <img class="imagem" src="./assets/images/foto.png" alt="">
+                </div>
+            </div>
+        </section>
+    <!-- fim conteudo menu  -->
+    <!-- conteudo meio -->
+        <section class="container_meio">
+            <div class="container_imagem">
+              <h2 class="beneficios_h2">Utilização de FHIR no tratamento de diabetes</h2>
+              <!-- card -->
+              <div class="beneficios_cartao">
+                <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                  <img class="card-img-top" src="./assets/images/imagem01.jpg" alt="Imagem do benefício">
+                  <div class="card-body">
+                    <h5 class="card-title">Autogestão do diabetes:</h5>
+                    <p class="card-text"> FHIR pode ser usado para fornecer informações sobre o diabetes aos pacientes em um formato fácil de entender. Isso pode ajudar os pacientes a gerenciar sua condição de forma mais eficaz.</p>
+                  </div>
+                </div>
+                <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                  <img class="card-img-top" src="./assets/images/imagem02.jpg" alt="Imagem do benefício">
+                  <div class="card-body">
+                    <h5 class="card-title">Melhoria da eficiência do atendimento ao diabetes:</h5>
+                    <p class="card-text"> O FHIR pode ser usado para automatizar tarefas administrativas relacionadas ao atendimento ao diabetes. Isso pode liberar tempo para os profissionais de saúde se concentrarem no cuidado dos pacientes.</p>
+                  </div>
+                </div>
+                <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                  <img class="card-img-top" src="./assets/images/imagem04.jpg" alt="Imagem do benefício">
+                  <div class="card-body">
+                    <h5 class="card-title">Melhoria da qualidade do atendimento ao diabetes: </h5>
+                    <p class="card-text">O FHIR pode ajudar a melhorar a qualidade do atendimento ao diabetes, fornecendo informações precisas e atualizadas aos profissionais de saúde.</p>
+                  </div>
+                </div>
+                <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                    <img class="card-img-top" src="./assets/images/imagem06.jpg" alt="Imagem do benefício">
+                    <div class="card-body">
+                      <h5 class="card-title">Promoção da inovação no atendimento ao diabetes: </h5>
+                      <p class="card-text">O FHIR pode ajudar a promover a inovação no atendimento ao diabetes, fornecendo um padrão aberto para o desenvolvimento de novos produtos e serviços.</p>
+                    </div>
+                  </div>
+              </div>
+            <!-- fim card -->
+
+            </div>
+          </section>
+    <!-- fim conteudo meio -->
+    <!-- informações -->
+    <section class="container_infos">
+        <div class="container">
+            <div class="titulo">
+                <h1>FHIR: Um padrão para melhorar a conexão entre médicos e pacientes com diabetes</h1>
+                <p>
+                    O uso do FHIR na diabetes pode melhorar a conexão entre médicos e pacientes de várias maneiras.
+                </p>
+                <p><b> Melhoria da comunicação entre profissionais de saúde:</b> O FHIR pode ser usado para compartilhar informações sobre os pacientes entre diferentes profissionais de saúde. Isso pode ajudar a garantir que os pacientes recebam o melhor atendimento possível.
+                <P><b> Pesquisa sobre diabetes:</b> O FHIR pode ser usado para coletar dados sobre o diabetes de uma maneira padronizada. Isso pode ajudar os pesquisadores a entender melhor a doença e desenvolver novos tratamentos.</P>
+                <P>O paciente com diabetes pode usar uma aplicação Web FHIR para <span> rastrear níveis de açúcar no sangue.</span> O aplicativo pode enviar dados sobre os níveis de açúcar no sangue do paciente para o médico, que pode usá-los para monitorar o progresso do paciente.</p>
+            </div>
+            <div class="imagem">
+                <img class="imagem" src="./assets/images/foto2.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- fim informações -->
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/formulario.js"></script>
+</body>
+</html>

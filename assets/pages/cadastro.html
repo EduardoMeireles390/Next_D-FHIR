@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <a class="navbar-brand" href="../../Index.html">
+            <img class="logo" src="../images/LOGO.png" alt="">
+        </a>
+    </header>
+    <div class="div-cadastro">
+        <div class="div-formulario">
+            <h1>Formulario de cadastro</h1>
+            <form id="formulario" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+        
+                <label for="nome_login">Nome de Usuário:</label>
+                <input type="text" id="login" name="nome_login" required><br><br>
+        
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required><br><br>
+        
+                <label for="confirmar_senha">Confirmar Senha</label>
+                <input type="password" id="confirmar_senha" name="confirmar_senha" required><br><br>
+        
+                <a href="../../Index.html" type="submit" class="btn btn-link text-primary">Criar</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="./assets/js/formulario.js"></script>
+    <script src="./assets/js/login.js"></script>
+</body>
+</html>
+
